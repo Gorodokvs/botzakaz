@@ -6,16 +6,17 @@ from telebot import  types
 
 #[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 
-def send_mess():
-    # "http://ip_adr/default/en_US/send.html?u=admin&p=admin&l=2&n=phoneNum&m=test"
-    #payload = {'key1': 'value1', 'key2': 'value2'}
-    r = requests.get('http://ip_adr/default/en_US/send.html?u=admin&p=admin&l=2&n=phoneNum&m=test')
-    print(r.url)
 
 
 
 
 bot = telebot.TeleBot('7647629268:AAE2HacxBvRl3etkfcIT8gzMz6XSZ3WXsVU')
+
+@bot.message_handler(commands=['sendsms'])
+def sendsms(message):
+    r = requests.get('http://192.168.1.102/default/en_US/send.html?u=admin&p=admin&l=2&n=89995655668&m=test')
+    print('ok')
+
 
 @bot.message_handler(commands=['start'])
 def start(message):
