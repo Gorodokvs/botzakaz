@@ -6,7 +6,7 @@ from telebot import  types
 
 #[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[
 
-def send_mess()
+def send_mess():
     # "http://ip_adr/default/en_US/send.html?u=admin&p=admin&l=2&n=phoneNum&m=test"
     #payload = {'key1': 'value1', 'key2': 'value2'}
     r = requests.get('http://ip_adr/default/en_US/send.html?u=admin&p=admin&l=2&n=phoneNum&m=test')
